@@ -13,15 +13,13 @@
  */
 
 fun main(){
-    print("hello")
-
     val x:IntArray = intArrayOf(-7, 1, 5, 2, -4, 3, 0)
     val size = x.size
 
     println("Index of array: ${solution1(x, size)}")
 }
 
-fun solution1(arrays:IntArray, size:Int):Int{
+fun solution1(arrays:IntArray, size:Int):Int{//Time Complexity: O(n)
     var leftSum = 0
     var sum =0
 
@@ -31,7 +29,6 @@ fun solution1(arrays:IntArray, size:Int):Int{
 
     for (i in 0 until size){
         sum -= arrays[i]
-
         if(sum == leftSum)return i
         leftSum += arrays[i]
     }
