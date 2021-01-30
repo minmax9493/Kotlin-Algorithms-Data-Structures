@@ -1,4 +1,4 @@
-package linkedlist
+package dataStructure.`linked-list`
 
 /**
  * LinkedList examples, the source is from geeks for geeks
@@ -22,10 +22,10 @@ fun main(){
 }
 
 class LinkedList {
-    var head:Node?=null
+    var head: Node?=null
 
     class Node(var data: Int) {
-        var next:Node?=null
+        var next: Node?=null
     }
 
     /**
@@ -53,7 +53,7 @@ class LinkedList {
         last.next = newNode
     }
 
-    fun pushAt(prevNode:Node?, newData: Int){
+    fun pushAt(prevNode: Node?, newData: Int){
         if(prevNode==null){
             println("The given previous prevNode can not be null")
             return
