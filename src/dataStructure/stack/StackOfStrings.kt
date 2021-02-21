@@ -19,20 +19,21 @@ package dataStructure.stack
  * **/
 class StackOfStrings {
 
-    private var first:Node?=null
-    private data class Node(val item:String, var next:Node?)// private inner class
+    private var first: Node? = null
 
-    fun isEmpty():Boolean{
+    private data class Node(val item: String, var next: Node?)// private inner class
+
+    fun isEmpty(): Boolean {
         return first == null
     }
 
-    fun push(item:String){
+    fun push(item: String) {
         val oldFirst = first
         first = Node(item, oldFirst)
         first?.next = oldFirst
     }
 
-    fun pop():String?{
+    fun pop(): String? {
         val item = first?.item
         first = first?.next
         return item
@@ -41,7 +42,7 @@ class StackOfStrings {
 
 }
 
-fun main(){
+fun main() {
     val stackOfStrings = StackOfStrings()
 
     stackOfStrings.push("Samsung")
